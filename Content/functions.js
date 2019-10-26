@@ -107,7 +107,7 @@ function idade ()
 function concluircadastro() {
   window.onload=function()
   {                
-    window.location = "Agendamento.html"; 
+    window.location = "agendamento.html"; 
   }
 }
 
@@ -154,7 +154,7 @@ function validaQuestionario()
   }
   else
   {
-    window.location.href = "Cadastro.html";
+    window.location.href = "cadastro.html";
   }
 }
 
