@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Washington Santos, Enos Andrade e João Victor">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Cadastro</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src='Content/functions.js'></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 200px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+      <a class="navbar-brand" href="#">
+        <img src="Imagens/pingo.png" height="32" class="d-inline-block align-top" alt="">
+        Hemonúcleo de Patos
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="Pre-triagem.html">Pré-triagem</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Cadastro<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Agendamento.html">Agendamento</a>
+          </li>
+        </ul>
+        <a class="navbar-brand" href="http://www.uepb.edu.br/">
+          <small class="mr-2">Universidade Estadual da Paraíba</small>
+          <img src="Imagens/uepb.png" height="32" class="d-inline-block align-top" alt="">
+        </a>
+      </div>
+    </nav>
+
+    <!-- Estilo personalizado para este modelo -->
+    <link href="form-validation.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-light">
+
+  <div class="jumbotron">
+    <div class="container">
+      <div class="text-center py-3 mt-5">
+        <img src="Imagens/pingo2.png" class="img-fluid" alt="Hemonúcleo" height="68" width="68">
+        <h1 class="display-4">Cadastro</h1>
+        <p class="lead mb-0">Preencha o formulário para realizar seu cadastro na triagem do Sistema de Doação de Sangue do Hemonúcleo de Patos</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 order-md-1">
+      </div>
+    
+      <div class="col-md-8 order-md-2">
+        <h4 class="mb-3">Dados Pessoais</h4>
+        <form name="formulario" class="needs-validation" action="Agendamento.html">
+          <div class="row">
+            <div class="col-md-8 mb-3">
+              <label for="nome">Nome <h11>*</h11></label>
+              <input type="text" class="form-control" id="nome" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Um nome válido é necessário.
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="sexo">Sexo <h11>*</h11></label>
+              <select class="custom-select d-block w-100" id="sexo" name="sexo" required>
+                <option value="">Selecione...</option>
+                <option value="M">Masculino</option>
+                <option value="F">Feminino</option>
+              </select>
+              <div class="invalid-feedback">
+                  Um último nome válido é necessário.
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="pai">Nome do Pai <h11>*</h11></label>
+              <input id="pai" name="pai" placeholder="" class="form-control input-md" required="" type="text">
+            </div>
+            
+            <div class="col-md-6 mb-3">
+              <label for="mae">Nome da Mãe <h11>*</h11></label>
+              <input id="mae" name="mae" placeholder="" class="form-control input-md" required="" type="text">
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="Estado Civil">Estado Civil <h11>*</h11></label>
+              <select required id="Estado Civil" name="Estado Civil" class="form-control">
+                <option value=""></option>
+                <option value="Solteiro(a)">Solteiro(a)</option>
+                <option value="Casado(a)">Casado(a)</option>
+                <option value="Divorciado(a)">Divorciado(a)</option>
+                <option value="Viuvo(a)">Viuvo(a)</option>
+                <option value="Outro">Outro</option>
+              </select>
+            </div>
+            
+            <div class="col-md-6 mb-3">
+              <label for="dtnasc">Nascimento <h11>*</h11></label>
+              <input id="dtnasc" name="dtnasc" placeholder="DD/MM/AAAA" class="form-control input-md" required="" type="text" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <label for="cpf">CPF <h11>*</h11></label>
+              <input id="cpf" name="cpf" placeholder="Apenas números" class="form-control input-md" required="" type="text" maxlength="11" pattern="[0-9]+$">
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <label for="nacionalidade">Nacionalidade <h11>*</h11></label>
+              <input id="nacionalidade" name="nacionalidade" placeholder="" class="form-control input-md" required="" type="text">
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <label for="estadon">Estado de Nascimento <h11>*</h11></label>
+              <select class="custom-select d-block w-100" id="estadon" name="estadon" required>
+                <option value="">Selecione...</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+              </select>
+              <div class="invalid-feedback">
+                Selecione um estado.
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <label for="RG">RG <h11>*</h11></label>
+              <input id="RG" name="RG" placeholder="Registro Geral" class="form-control input-md" required="" type="text">
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <label for="orgexp">Órgão Expeditor <h11>*</h11></label>
+              <input id="orgexp" name="orgexp" placeholder="Ex.: SSDS" class="form-control input-md" required="" type="text">
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <label for="estadoe">Estado de Emissão do RG <h11>*</h11></label>
+              <select class="custom-select d-block w-100" id="estadoe" name="estadoe" required>
+                <option value="">Selecione...</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+              </select>
+              <div class="invalid-feedback">
+                Selecione um estado.
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="profissao">Profissão</label>
+              <input id="profissao" name="profissao" placeholder="Ex.: Servidor Público" class="form-control input-md" required="" type="text">
+            </div>
+            
+            <div class="col-md-6 mb-3">
+              <label for="escolaridade">Escolaridade <h11>*</h11></label>
+              <select class="custom-select d-block w-100" id="escolaridade" name="escolaridade" required>
+                <option value="">Selecione...</option>
+                <option value="Analfabeto">Não Alfabetizado</option>
+                <option value="Fundamental Incompleto">Fundamental Incompleto</option>
+                <option value="Fundamental Completo">Fundamental Completo</option>
+                <option value="Médio Incompleto">Médio Incompleto</option>
+                <option value="Médio Completo">Médio Completo</option>
+                <option value="Superior Incompleto">Superior Incompleto</option>
+                <option value="Superior Completo">Superior Completo</option>
+                <option value="Especialização">Especialização</option>
+                <option value="Mestrado">Mestrado</option>
+                <option value="Doutorado">Doutorado</option>
+              </select>
+              <div class="invalid-feedback">
+                Selecione um nível de Escolaridade.
+              </div>
+            </div>
+          </div>
+          
+          <hr class="mb-4">
+            
+          <h4 class="mb-3">Dados de Contato</h4>
+            
+          <!-- Search input-->
+          <h6 class="mb-3">Endereço</h6>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+            <!--label for="cep">CEP <h11>*</h11></label-->
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="ceplb">CEP</span>
+              </div>
+              <input id="cep" name="cep" placeholder="Apenas números" class="form-control input-md" required="" value="" type="search" maxlength="8" pattern="[0-9]+$">
+              <div class="input-group-append">
+                <button type="button" class="btn btn-secondary" onclick="pesquisacep(cep.value)">Pesquisar</button>
+              </div>
+            </div>
+            </div>
+          </div>
+          
+          <!-- Prepended text-->
+          <div class="row">
+            <div class="col-md-9 mb-3">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Logradouro</span>
+                </div>
+                <input id="logradouro" name="logradouro" class="form-control input-md" placeholder="" required="" type="text">
+              </div>
+            </div>
+            
+            <div class="col-md-3 mb-3">
+              <div class="input-group">
+                <span class="input-group-text">Nº <h11>*</h11></span>
+                <input id="numero" name="numero" class="form-control" placeholder="" required="" type="text">
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="input-group">
+                <span class="input-group-text">Bairro</span>
+                <input id="bairro" name="bairro" class="form-control" placeholder="" required="" type="text">
+              </div>
+            </div>
+             
+            <div class="col-md-4 mb-3">
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-text">Cidade</span>
+                  <input id="cidade" name="cidade" class="form-control" placeholder="" required="" type="text">
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="input-group">
+                <span class="input-group-text">Estado</span>
+                <input id="estado" name="estado" class="form-control" placeholder="" required="" type="text">
+              </div>
+            </div>
+            
+            <div class="col-md-12 mb-3">
+              <div class="input-group">
+                <span class="input-group-text">Complemento</span>
+                <input id="complemento" name="complemento" class="form-control" placeholder="" required="" type="text">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <label for="telefone">Telefone <h11>*</h11></label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                <input id="telefone" name="telefone" class="form-control" placeholder="XX XXXXX-XXXX" required="" type="text" maxlength="13" pattern="\[0-9]{2}\ [0-9]{4,6}-[0-9]{3,4}$"
+                OnKeyPress="formatar('## #####-####', this)">
+              </div>
+            </div>
+            <div class="col-md-8 mb-3">
+              <label for="email">Email <h11>*</h11></label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                <input type="email" id="email" name="email" class="form-control" placeholder="usuario@dominio.com">
+                <div class="invalid-feedback">
+                  Insira um email válido para receber mensagens.
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <hr class="mb-4">
+          <button class="btn btn-success btn-lg btn-block" type="submit" onclick="agendamento()">Concluir Cadastro</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+  </script>
+  
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2019 APS P5 UEPB</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Política de Privacidade</a></li>
+      <li class="list-inline-item"><a href="#">Termos de Uso</a></li>
+      <li class="list-inline-item"><a href="#">Ajuda</a></li>
+    </ul>
+  </footer>
+  </body>
+</html>
